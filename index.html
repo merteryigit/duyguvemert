@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171312" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="description" content="A little album made for you." />
+    <title>DUYGU — 2026</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="album" aria-label="Duygu albümü">
+      <section class="album-intro">
+        <div class="cover-wrap">
+          <img class="cover" src="assets/cover.png" alt="Duygu albüm kapağı" />
+        </div>
+
+        <p class="eyebrow">Sana özel bir albüm</p>
+        <h1>DUYGU</h1>
+        <p class="year">2026</p>
+        <p class="dedication">Senin için yaptığım küçük bir albüm.</p>
+      </section>
+
+      <section class="track-section" aria-labelledby="tracklist-title">
+        <div class="section-heading">
+          <h2 id="tracklist-title">Şarkılar</h2>
+          <span id="album-count" aria-label="Şarkı sayısı"></span>
+        </div>
+        <ol id="tracklist" class="tracklist"></ol>
+      </section>
+    </main>
+
+    <footer class="player-shell">
+      <div class="now-playing" aria-live="polite">
+        <span class="now-label">Şimdi çalıyor</span>
+        <p id="now-title">Bir şarkı seç</p>
+      </div>
+
+      <div class="progress-row">
+        <span id="current-time">0:00</span>
+        <input id="progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Şarkı ilerlemesi" />
+        <span id="duration">0:00</span>
+      </div>
+
+      <div class="controls" aria-label="Müzik kontrolleri">
+        <button id="previous" class="icon-button" type="button" aria-label="Önceki şarkı">
+          <span aria-hidden="true">↞</span>
+        </button>
+        <button id="play" class="play-button" type="button" aria-label="Çal">
+          <span id="play-icon" aria-hidden="true">▶</span>
+        </button>
+        <button id="next" class="icon-button" type="button" aria-label="Sonraki şarkı">
+          <span aria-hidden="true">↠</span>
+        </button>
+      </div>
+      <p id="player-message" class="player-message" aria-live="polite"></p>
+    </footer>
+
+    <audio id="audio" preload="metadata"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
