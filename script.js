@@ -14,7 +14,6 @@ const audio = document.querySelector("#audio");
 const tracklist = document.querySelector("#tracklist");
 const nowTitle = document.querySelector("#now-title");
 const playButton = document.querySelector("#play");
-const playIcon = document.querySelector("#play-icon");
 const progress = document.querySelector("#progress");
 const currentTime = document.querySelector("#current-time");
 const duration = document.querySelector("#duration");
@@ -57,7 +56,7 @@ function selectTrack(index, shouldPlay = false) {
 
 function updatePlaybackUI() {
   const isPlaying = !audio.paused;
-  playIcon.textContent = isPlaying ? "Ⅱ" : "▶";
+  playButton.classList.toggle("is-playing", isPlaying);
   playButton.setAttribute("aria-label", isPlaying ? "Duraklat" : "Çal");
   renderTracks();
 }
