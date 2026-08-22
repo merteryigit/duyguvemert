@@ -5,7 +5,7 @@ const album = {
     { title: "Dünyayı Gezdim", src: "music/Dünyayı Gezdim.mp3" },
     { title: "Dört Yıl Önce İki Yabancıydık", src: "music/Dört Yıl Önce İki Yabancıydık.mp3" },
     { title: "Tatlı mıyım?", src: "music/Tatlı mıyım_.mp3" },
-    { title: "İyi Ki Varsın Duygum", src: "music/iyikivarsinduygum.mp3" },
+    { title: "If I Had One More Day", src: "music/IfIHadOneMoreDay..mp3" },
     { title: "Dünyanın Sonuna Kadar Gittik", src: "music/Dünyanın Sonuna Kadar Gittik.mp3" },
   ],
 };
@@ -30,13 +30,19 @@ function formatTime(seconds) {
   return `${minutes}:${String(Math.floor(seconds % 60)).padStart(2, "0")}`;
 }
 
+function trackActionIcon(isPlaying) {
+  return isPlaying
+    ? '<svg viewBox="0 0 24 24"><path d="M7 5h3v14H7zm7 0h3v14h-3z" /></svg>'
+    : '<svg viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z" /></svg>';
+}
+
 function renderTracks() {
   tracklist.innerHTML = album.tracks.map((track, index) => `
     <li>
       <button class="track${index === currentTrack ? " is-active" : ""}" type="button" data-track="${index}" aria-label="${track.title} şarkısını çal">
         <span class="track-number">${String(index + 1).padStart(2, "0")}</span>
         <span class="track-title">${track.title}</span>
-        <span class="track-action" aria-hidden="true">${index === currentTrack && !audio.paused ? "Ⅱ" : "▶"}</span>
+        <span class="track-action" aria-hidden="true">${trackActionIcon(index === currentTrack && !audio.paused)}</span>
       </button>
     </li>
   `).join("");
