@@ -5,7 +5,7 @@ const album = {
     { title: "Dünyayı Gezdim", src: "music/Dünyayı Gezdim.mp3" },
     { title: "Dört Yıl Önce İki Yabancıydık", src: "music/Dört Yıl Önce İki Yabancıydık.mp3" },
     { title: "Tatlı mıyım?", src: "music/Tatlı mıyım_.mp3" },
-    { title: "If I Had One More Day", src: "music/IfIHadOneMoreDay..mp3" },
+    { title: "If I Had One More Day", src: "music/IfIHadOneMoreDay.mp3" },
     { title: "Dünyanın Sonuna Kadar Gittik", src: "music/Dünyanın Sonuna Kadar Gittik.mp3" },
   ],
 };
