@@ -33,7 +33,7 @@ function formatTime(seconds) {
 function trackActionIcon(isPlaying) {
   return isPlaying
     ? '<svg viewBox="0 0 24 24"><path d="M7 5h3v14H7zm7 0h3v14h-3z" /></svg>'
-    : '<svg viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z" /></svg>';
+    : '<svg viewBox="0 0 24 24"><path d="M8 5.2a.8.8 0 0 1 1.25-.66l9.7 6.8a.8.8 0 0 1 0 1.32l-9.7 6.8A.8.8 0 0 1 8 18.8V5.2Z" /></svg>';
 }
 
 function renderTracks() {
@@ -65,7 +65,7 @@ function updatePlaybackUI() {
   const isPlaying = !audio.paused;
   playIcon.innerHTML = isPlaying
     ? '<svg viewBox="0 0 24 24"><path d="M7 5h3v14H7zm7 0h3v14h-3z" /></svg>'
-    : '<svg viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z" /></svg>';
+    : '<svg viewBox="0 0 24 24"><path d="M8 5.2a.8.8 0 0 1 1.25-.66l9.7 6.8a.8.8 0 0 1 0 1.32l-9.7 6.8A.8.8 0 0 1 8 18.8V5.2Z" /></svg>';
   playButton.setAttribute("aria-label", isPlaying ? "Duraklat" : "Çal");
   renderTracks();
 }
